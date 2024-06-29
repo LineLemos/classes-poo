@@ -8,10 +8,10 @@ public class Pessoa {
     String cpf;
     EnderecoPessoa ep = new EnderecoPessoa();
 
-    public int pessoaId(){
+    public int getpessoaId(){
         return pessoaId;
     }
-    public void pessoaId( int pessoaId){
+    public void setpessoaId( int pessoaId){
         this.pessoaId = pessoaId;
     }
 
@@ -23,16 +23,16 @@ public class Pessoa {
         this.nome = nome;
     }
 
-    public int rg(){
+    public int getrg(){
         return rg;
     }
-    public void rg(int rg){
+    public void setrg(int rg){
         this.rg = rg;
     }
-    public int cpf(){
+    public String getcpf(){
         return cpf;
     }
-    public void cpf(int cpf){
-        this.rg = cpf;
+    public void setcpf(String cpf){
+        this.cpf = cpf;
     }
 }

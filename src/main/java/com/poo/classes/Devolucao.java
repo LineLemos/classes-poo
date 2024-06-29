@@ -10,8 +10,8 @@ public class Devolucao {
     public int getdevolucaoId(){
         return devolucaoId;
     }
-    public int setdevolucaoId(int devolucaoId){
-        return devolucaoId;
+    public void setdevolucaoId(int devolucaoId){
+        this.devolucaoId = devolucaoId;
     }
   
     public LocalDate getdataDevolucao(){
