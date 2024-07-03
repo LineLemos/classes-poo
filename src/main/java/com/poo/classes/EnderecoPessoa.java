@@ -3,10 +3,19 @@ package com.poo.classes;
 public class EnderecoPessoa {
 
     int enderecoId;
+    int cep;
     String cidade;
     String uf;
     String logradouro;
     String complemento;
+
+    public EnderecoPessoa(int cep) {
+        this.cep = cep;
+        this.enderecoId = IdGenerator.generateEnderecoPessoaId();
+    }
+    public String toString(){
+        return "Endereço do usuário [ID: " + enderecoId + ", CEP: " + cep + "]";
+    }
 
     public int getenderecoId(){
         return enderecoId;

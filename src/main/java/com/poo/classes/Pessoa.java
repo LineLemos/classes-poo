@@ -4,9 +4,17 @@ public class Pessoa {
 
     int pessoaId;
     String nome;
-    int rg;
     String cpf;
     EnderecoPessoa ep = new EnderecoPessoa();
+
+    public Pessoa(String nome, String cpf) {
+        this.nome = nome;
+        this.cpf = cpf;
+        this.pessoaId = IdGenerator.generatePessoaId();
+    }
+    public String toString(){
+        return "Usuário [ID: " + pessoaId + ", Nome: " + nome + ", CPF: " + cpf + "]";
+    }
 
     public int getpessoaId(){
         return pessoaId;

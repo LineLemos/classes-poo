@@ -3,9 +3,19 @@ package com.poo.classes;
 public class Livro {
 
     int livroId;
-    String edicao;
     String titulo;
-    String ano;
+    int edicao;
+    int ano;
+
+    public Livro(String titulo, int edicao, int ano) {
+        this.titulo = titulo;
+        this.edicao = edicao;
+        this.livroId = IdGenerator.generateLivroId();
+    }
+    public String toString(){
+        return "Livro [ID: " + livroId + ", Título: " + titulo + ", Edição: " + edicao + ", Ano: " + ano + "]";
+    }
+
 
     public int getlivroId(){
         return livroId;

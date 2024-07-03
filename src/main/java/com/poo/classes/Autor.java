@@ -11,28 +11,25 @@ public class Autor {
         this.nome = nome;
         this.autorId = IdGenerator.generateAutorId();
     }
-    public String toString(){
-        return "Autor [ID: " + autorId + ", Nome: " + nome + "    ]";
-    }
-    public void teste(){
-        
-    }
-}
 
-    public int getautorId(){
+    public String toString() {
+        return "Autor [ID: " + autorId + ", Nome: " + nome + "]";
+    }
+
+    public int getautorId() {
         return autorId;
     }
-    public void setautorId( int autorId){
+
+    public void setautorId(int autorId) {
         this.autorId = autorId;
     }
 
-    public String getnome(){
+    public String getnome() {
         return nome;
     }
 
-    public void setnome(String nome){
+    public void setnome(String nome) {
         this.nome = nome;
     }
-    
-    
+
 }
