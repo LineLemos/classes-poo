@@ -1,9 +1,23 @@
 package com.poo.classes;
 
+import org.springframework.util.IdGenerator;
+
 public class Autor {
 
     int autorId;
     String nome;
+
+    public Autor(String nome) {
+        this.nome = nome;
+        this.autorId = IdGenerator.generateAutorId();
+    }
+    public String toString(){
+        return "Autor [ID: " + autorId + ", Nome: " + nome + "    ]";
+    }
+    public void teste(){
+        
+    }
+}
 
     public int getautorId(){
         return autorId;
