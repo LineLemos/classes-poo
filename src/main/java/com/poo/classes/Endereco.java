@@ -1,6 +1,6 @@
 package com.poo.classes;
 
-public class EnderecoPessoa {
+public class Endereco {
 
     int enderecoId;
     int cep;
@@ -9,12 +9,12 @@ public class EnderecoPessoa {
     String logradouro;
     String complemento;
 
-    public EnderecoPessoa(int cep) {
+    public Endereco(int cep) {
         this.cep = cep;
-        this.enderecoId = IdGenerator.generateEnderecoPessoaId();
+        this.enderecoId = IdGenerator.generateEnderecoId();
     }
     public String toString(){
-        return "Endereço do usuário [ID: " + enderecoId + ", CEP: " + cep + "]";
+        return "Endereço [ID: " + enderecoId + ", CEP: " + cep + "]";
     }
 
     public int getenderecoId(){

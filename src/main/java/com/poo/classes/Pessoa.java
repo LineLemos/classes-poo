@@ -1,19 +1,20 @@
 package com.poo.classes;
 
-public class Pessoa {
+abstract class Pessoa{
 
     int pessoaId;
     String nome;
     String cpf;
-    EnderecoPessoa ep = new EnderecoPessoa();
+    Endereco endereco;
 
-    public Pessoa(String nome, String cpf) {
+    public Pessoa(String nome, String cpf, Endereco endereco){
         this.nome = nome;
         this.cpf = cpf;
+        this.endereco = endereco;
         this.pessoaId = IdGenerator.generatePessoaId();
     }
     public String toString(){
-        return "Usuário [ID: " + pessoaId + ", Nome: " + nome + ", CPF: " + cpf + "]";
+        return "Usuário [ID: " + pessoaId + ", Nome: " + nome + ", CPF: " + cpf + ", CEP: " + cep +"]";
     }
 
     public int getpessoaId(){
@@ -31,16 +32,15 @@ public class Pessoa {
         this.nome = nome;
     }
 
-    public int getrg(){
-        return rg;
-    }
-    public void setrg(int rg){
-        this.rg = rg;
-    }
     public String getcpf(){
         return cpf;
     }
-    public void setcpf(String cpf){
-        this.cpf = cpf;
+    public void setCpf(String cpf) {
+        if (cpf != null && cpf.length() == 11) {
+            this.cpf = cpf;
+        } else {
+            throw new IllegalArgumentException("Cpf deve conter 11 numeros");
+        }
     }
-}
+    }
+

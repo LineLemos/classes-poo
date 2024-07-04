@@ -1,14 +1,16 @@
 package com.poo.classes;
 
+import java.util.UUID;
+
 import org.springframework.util.IdGenerator;
 
-public class Autor {
+public class Autor extends Pessoa{
 
     int autorId;
-    String nome;
 
-    public Autor(String nome) {
-        this.nome = nome;
+    public Autor(String nome, String cpf, Endereco endereco) {
+        super(nome, cpf, endereco);
+        
         this.autorId = IdGenerator.generateAutorId();
     }
 
