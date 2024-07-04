@@ -6,4 +6,15 @@ public class Atendente extends Funcionario {
 
         super(nome, cpf, senha, login, salario, endereco);
     }
+
+    public void contraCheque(){
+        System.out.println("Impressão de contracheque para Atendente: ");
+        System.out.println("Salário Base: " + getSalario());
+
+    double fgts = getSalario() * 0.1;
+    double inss = getSalario() * 0.12;
+    System.out.println("FGTS: " + fgts);
+    System.out.println("INSS: " + inss);
+    
+}
 }
